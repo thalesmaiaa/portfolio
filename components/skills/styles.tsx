@@ -1,7 +1,7 @@
 export const styles = {
     
     skillsTitle: {
-        textAlign: "center",
+
         mb: 3,
         color: "#E7F6F2",
         fontFamily: "Roboto Mono",
@@ -14,12 +14,11 @@ export const styles = {
 
     skillsArea: {
         display: "flex",
-        flexDirection: "row",
-        justifyContent: "center"
+
     },
 
     skillsList: {
-        width: "40%",
+        width: "20%",
     },
 
     skillsItem: {

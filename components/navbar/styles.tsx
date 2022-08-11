@@ -22,6 +22,8 @@ export const styles = {
     links: {
         color: "#E7F6F2",
         marginRight: 2,
+        fontFamily: "Poppins",
         fontSize: "20px",
+        fontWeight: "800"
     }
 }

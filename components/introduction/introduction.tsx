@@ -10,11 +10,10 @@ export const Introduction: React.FC = () => {
                 <Typography sx={styles.name} variant="h2">
                     Hello, my name is THALES.
                 </Typography>
-                <Typography sx={styles.presentation} variant="h6">
+                <Typography sx={styles.presentation} variant="h5">
                           
-                    I'm a Front-end developer living in Brazil(Fortaleza/CE), 
-                    and this is a website that talks about me, 
-                    enumerate my coding skills and have some projects that you might want to see .
+                    This is a website that talks about me, show a few technologies that i've been working recently 
+                    and list some projects that you might want to see.
                 </Typography>
             </Box>
 

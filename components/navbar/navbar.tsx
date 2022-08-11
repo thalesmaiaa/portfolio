@@ -13,14 +13,17 @@ export const Navbar: React.FC = () => {
                     <CodeIcon fontSize="large"/>
                 </IconButton>
                 <Box sx={styles.linksArea}>
-                <Link href=""> 
-                    <Typography sx={styles.links}>Projects</Typography>
+                <Link href="#projects"> 
+                <a>
+                <Typography sx={styles.links}>PROJECTS</Typography>
+                </a>
+                    
                 </Link>
-                <Link href="">
-                    <Typography sx={styles.links}>Linkedin</Typography>
-                </Link>
-                <Link href="">
-                    <Typography sx={styles.links}>About me</Typography>
+                <Link href="#aboutMe">
+                    <a>
+                    <Typography sx={styles.links}>ABOUT ME</Typography>
+                    </a>
+                   
                 </Link>
                 </Box>
                
