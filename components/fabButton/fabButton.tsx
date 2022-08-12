@@ -4,7 +4,9 @@ import { styles } from "./styles";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { useRouter } from "next/router";
-export const CustomFabButton = () => {
+
+
+export const CustomFabButton: React.FC = () => {
 
     const media = [
         {

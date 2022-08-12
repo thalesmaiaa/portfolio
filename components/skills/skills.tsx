@@ -1,11 +1,11 @@
 import HtmlIcon from '@mui/icons-material/Html';
 import CssIcon from '@mui/icons-material/Css';
 import JavascriptIcon from '@mui/icons-material/Javascript';
-import GitHubIcon from '@mui/icons-material/GitHub';
 import { DiReact } from "react-icons/di";
 import { SiNextdotjs, SiTypescript } from "react-icons/si"
 import { 
     Box, 
+    Button,
     List, 
     ListItem, 
     ListItemIcon, 
@@ -17,16 +17,30 @@ import { styles } from './styles';
 export const Skills: React.FC = () => {
 
     const leftSideSkills = [
-        <HtmlIcon fontSize="large" sx={styles.skillsColor}/>,
-        <CssIcon fontSize="large" sx={styles.skillsColor}/>,
-        <JavascriptIcon fontSize="large" sx={styles.skillsColor}/>, 
-             
+        <Button>
+            <HtmlIcon fontSize="large" sx={styles.skillsColor}/>
+        </Button>,
+        <Button>
+            <CssIcon fontSize="large" sx={styles.skillsColor}/>
+        </Button>,
+        <Button>
+            <JavascriptIcon fontSize="large" sx={styles.skillsColor}/>
+        </Button>,         
     ]
 
     const rightSideSkills = [  
-        <SiNextdotjs size="2.2em"style={styles.skillsColor}/>,
-        <DiReact size="2.2em" style={styles.skillsColor}/>,
-        <SiTypescript size="2.2em" style={styles.skillsColor} />   
+        <Button>
+            <SiNextdotjs size="2.2em"style={styles.skillsColor}/>
+        </Button>,
+        <Button>
+            <DiReact size="2.2em" style={styles.skillsColor}/>
+        </Button>,
+        <Button>
+            <SiTypescript size="2.2em" style={styles.skillsColor} />
+        </Button>,
+     
+        
+           
     ]
     
     return (

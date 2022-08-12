@@ -6,11 +6,27 @@ export const styles = {
     },
 
     app: {
-        color: "#E7F6F2",
-        backgroundColor: "#2C3333",
         fontFamily: ['"Poppins"', "sans-serif"].join(",")
-          
     },
+
+    contact: {
+        mt: 5,
+        color: "#E7F6F2",
+        fontFamily: "Roboto Mono",
+        fontWeight: 700
+    },
+
+    contactInputsBackground: {
+        // backgroundColor: "#E7F6F2"
+        backgroundColor: "#fff"
+    },
+
+    contactInputsColor: {
+        // color: "#2C3333"
+        color: "black"
+    }
+
+    
 
 
 }
