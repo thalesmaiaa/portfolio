@@ -13,51 +13,39 @@ import {
 } from "@mui/material";
 import { styles } from './styles';
 
-
 export const Skills: React.FC = () => {
 
     const leftSideSkills = [
-        <Button>
-            <HtmlIcon fontSize="large" sx={styles.skillsColor}/>
-        </Button>,
-        <Button>
-            <CssIcon fontSize="large" sx={styles.skillsColor}/>
-        </Button>,
-        <Button>
-            <JavascriptIcon fontSize="large" sx={styles.skillsColor}/>
-        </Button>,         
+        <HtmlIcon fontSize="large" sx={styles.skillsColor}/>,
+        <CssIcon fontSize="large" sx={styles.skillsColor}/>,
+        <JavascriptIcon fontSize="large" sx={styles.skillsColor}/>,
+           
     ]
 
     const rightSideSkills = [  
-        <Button>
-            <SiNextdotjs size="2.2em"style={styles.skillsColor}/>
-        </Button>,
-        <Button>
-            <DiReact size="2.2em" style={styles.skillsColor}/>
-        </Button>,
-        <Button>
-            <SiTypescript size="2.2em" style={styles.skillsColor} />
-        </Button>,
-     
-        
-           
+        <SiNextdotjs size="2.2em"style={styles.skillsColor}/>,
+        <DiReact size="2.2em" style={styles.skillsColor}/>,
+        <SiTypescript size="2.2em" style={styles.skillsColor} />,
     ]
     
     return (
         <>
             <Typography variant="h6" sx={styles.skillsTitle}>
-                TECHNOLOGIES I'VE BE WORKING:
+                {"TECHNOLOGIES I'VE BE WORKING:"}
             </Typography>
             <Box sx={styles.skillsArea}>
                 
             <List sx={styles.skillsList}>
                 {leftSideSkills.map((skill, idx) => 
                      
-                     <ListItem key={idx} sx={styles.skillsItem}>
+                    <ListItem key={idx} sx={styles.skillsItem}>
                         
-                        <ListItemIcon>
-                            {skill}
-                        </ListItemIcon>
+                     <ListItemIcon key={idx}>
+                         <Button key={idx}>
+                             {skill}
+                         </Button>
+                        
+                     </ListItemIcon>
                     </ListItem>
                     
                 )}
@@ -66,13 +54,13 @@ export const Skills: React.FC = () => {
                 {rightSideSkills.map((skill , idx) => 
                      
                     <ListItem key={idx} sx={styles.skillsItem}>
-
-                        <ListItemIcon>
-                            {skill}
-                        </ListItemIcon>
-                       
-                        {/* </Box> */}
-                       
+                        
+                     <ListItemIcon key={idx}>
+                         <Button key={idx}>
+                             {skill}
+                         </Button>
+                        
+                     </ListItemIcon>
                     </ListItem>
                     
                     

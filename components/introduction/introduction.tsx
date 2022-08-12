@@ -12,8 +12,7 @@ export const Introduction: React.FC = () => {
                 </Typography>
                 <Typography sx={styles.presentation} variant="h5">
                           
-                    This is a website that talks about me, show a few technologies that i've been working recently 
-                    and list some projects that you might want to see.
+                   {"This is a website that talks about me, show a few technologies that i've been working recently and list some projects that you might want to see."} 
                 </Typography>
             </Box>
 

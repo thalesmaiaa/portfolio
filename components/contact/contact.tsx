@@ -11,7 +11,7 @@ export const ContactMe = () => {
         <Grid  container>
             <Grid item xs={4} onClick={() => router.push("/contact")}>
             <Typography sx={styles.contact}>FEEL FREE TO CONTACT ME </Typography>
-            <Typography sx={styles.contact}>LET'S GET TO WORK TOGETHER</Typography>
+            <Typography sx={styles.contact}>{"LET'S GET TO WORK TOGETHER"}</Typography>
             </Grid>
         </Grid>
     )

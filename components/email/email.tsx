@@ -21,7 +21,7 @@ export const EmailField: React.FC<Props> =
     xs=5, 
     multiline=false,
     rows=1,
-    error="", 
+    error=false, 
     helperText=""
 }: Props) => {
 

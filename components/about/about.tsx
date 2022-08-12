@@ -8,8 +8,8 @@ export const AboutMe = () => {
                 ABOUT ME
             </Typography>
             <Typography sx={styles.content}>
-            I'm a Front-end developer located in Brazil. Currently,
-            i'm studying computer science at Universidade Estadual do Ceará(UECE).
+            {"I'm a Front-end developer located in Brazil. Currently,"}
+            {"i'm studying computer science at Universidade Estadual do Ceará(UECE)."}
             </Typography>
             <Typography sx={styles.content}>
             Problem solver and always trying to get better at my skills.
