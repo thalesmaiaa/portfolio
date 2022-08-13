@@ -9,7 +9,8 @@ export const styles = {
     projectArea: {
         "&:hover": {
             cursor: "pointer"
-        }
+        },
+        mr: 3
     },
 
     projectName: {

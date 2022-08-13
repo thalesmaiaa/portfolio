@@ -1,17 +1,14 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+[![author](https://img.shields.io/badge/author-thalesmaiaa-blue)](https://www.linkedin.com/in/thalesmaiaa/) [![](https://img.shields.io/badge/nextJS-12.2.4-black)](https://nextjs.org/) 
+[![](https://img.shields.io/badge/typescript-4.7.4-blue)](https://www.typescriptlang.org/)
 
-## Getting Started
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/84349239/184497895-55258b6c-787d-432b-b2bb-163aca06e07f.png" alt="imagem maneira relacionada ao projeto"height=400px >
+</p>
+## Portfolio
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+My portfolio website hosted on github made with nextJS and typescript. This site talks a little bit about me, list my tech skills and have some projects that i've buid. So, if you want to know more about me and what i can build just click [here](https://thalesmaiaa.github.io/portfolio/)
 
 
+**Links to find me:**
+* [LinkedIn](https://www.linkedin.com/in/thalesmaiaa/)
+* [Portfolio](https://thalesmaiaa.github.io/portfolio/)

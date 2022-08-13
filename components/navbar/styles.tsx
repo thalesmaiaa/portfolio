@@ -6,7 +6,9 @@ export const styles = {
         display: "flex",
         flexDirection: "row",
         alignItems: "center",
-        justifyContent: "space-between"
+        justifyContent: "space-between",
+        ml: 3,
+        mr: 3
     },
     
     codeIcon: {

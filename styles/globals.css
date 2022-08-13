@@ -28,4 +28,20 @@ a {
   }
 }
 
+/* Scrollbar */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #000;
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #2C3333;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #E7F6F2;
+  border: 3px solid #E7F6F2;
+  border-radius: 12px;
+}
 

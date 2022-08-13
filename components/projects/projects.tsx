@@ -34,7 +34,7 @@ export const Projects: React.FC = () => {
                 <>
                     {projects.map((project, id) => 
                     <Link href={project.html_url} key={id}>
-                        <Grid item xs={6} sx={styles.projectArea}>
+                        <Grid item xs={5} sx={styles.projectArea}>
                             <Card>
                             <CardContent>
                                 <Typography 
