@@ -17,13 +17,17 @@ const Home: NextPage = () => {
 
   return (
    <>
+   <div>
+   <CustomFabButton />
    <Box 
    sx={styles.app}
     >
+  
     <Navbar />
-    <CustomFabButton />
+   
 
     <Container maxWidth="md">
+   
       <Introduction />
       <Skills />
       <Divider sx={styles.divider}/>
@@ -32,10 +36,14 @@ const Home: NextPage = () => {
       <Projects />
       <Divider sx={styles.divider}/>
       <ContactMe />
+     
     </Container>
-    
+  
    
    </Box>
+   </div>
+  
+   
     
    </>
   )

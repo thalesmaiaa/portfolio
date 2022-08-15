@@ -1,3 +1,5 @@
+import { theme } from "../../theme/theme";
+
 export const styles = {
     
     skillsTitle: {
@@ -5,7 +7,10 @@ export const styles = {
         mb: 3,
         color: "#E7F6F2",
         fontFamily: "Roboto Mono",
-        fontWeight: 700
+        fontWeight: 700,
+        [theme.breakpoints.down("sm")]: {
+            fontSize: "15px"
+        }
     },
 
     skillsColor: {

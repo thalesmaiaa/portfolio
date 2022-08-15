@@ -9,7 +9,7 @@ export const ContactMe = () => {
 
     return (
         <Grid  container>
-            <Grid item xs={4} onClick={() => router.push("/contact")}>
+            <Grid item xs={12} md={4} onClick={() => router.push("/contact")}>
             <Typography sx={styles.contact}>FEEL FREE TO CONTACT ME </Typography>
             <Typography sx={styles.contact}>{"LET'S GET TO WORK TOGETHER"}</Typography>
             </Grid>

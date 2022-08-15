@@ -1,3 +1,5 @@
+import { theme } from "../../theme/theme";
+
 export const styles = {
     
     navContainer: {
@@ -8,7 +10,10 @@ export const styles = {
         alignItems: "center",
         justifyContent: "space-between",
         ml: 3,
-        mr: 3
+        mr: 3,
+        [theme.breakpoints.down("sm")]: {
+            m: 0
+        }
     },
     
     codeIcon: {
