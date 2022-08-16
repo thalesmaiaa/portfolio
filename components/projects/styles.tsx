@@ -10,6 +10,15 @@ export const styles = {
             fontSize: "15px"
         }
     },
+    
+
+    projectDiv: {
+        [theme.breakpoints.down("sm")]: {
+            width: "100%"
+        },
+        width: "50%",
+       
+    },
 
     projectArea: {
         "&:hover": {
