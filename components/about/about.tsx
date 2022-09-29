@@ -1,21 +1,22 @@
-import { Box, Typography } from "@mui/material"
-import { styles } from "./stlyes"
+import { Box, Typography } from "@mui/material";
+
+import styles from "./about.module.scss";
 
 export const AboutMe = () => {
-    return (
-        <Box id="aboutMe">
-            <Typography variant="h6" sx={styles.aboutTitle}>
-                ABOUT ME
-            </Typography>
-            <Typography sx={styles.content}>
-            {"I'm a Front-end developer located in Brazil. Currently,"}
-            {"i'm studying computer science at Universidade Estadual do Ceará(UECE)."}
-            </Typography>
-            <Typography sx={styles.content}>
-            I really enjoy being able to create huge, performatic webApps.<br></br>
-            Problem solver and always trying to get better at my skills with high interest in the Front-end area 
-            to work on ambitious projects with great people.
-            </Typography>
-        </Box>
-    )
-}
+  return (
+    <Box id="aboutMe" className={styles.aboutContainer}>
+      <Box className={styles.aboutText}>
+        <Typography variant="h6" className={styles.aboutTitle}>
+          About Me
+        </Typography>
+        <Typography className={styles.content}>
+          I'm 19 years old Frontend Developer who cares profoundly about user
+          experience and passionate about building excellent softwares that can
+          help lives of others.I like imagine useful interaction, developing
+          rich web experiences & web applications. When I'm not coding or at the
+          gym I might be at the University studying Computer Science.
+        </Typography>
+      </Box>
+    </Box>
+  );
+};

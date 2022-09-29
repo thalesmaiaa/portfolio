@@ -1,52 +1,98 @@
-import { Box, Container, Divider } from '@mui/material'
-import type { NextPage } from 'next'
+import type { NextPage } from "next";
 
-import { Navbar } from '../components/navbar/navbar'
-import { Introduction } from '../components/introduction/introduction'
-import { Skills } from '../components/skills/skills'
-import { AboutMe } from '../components/about/about'
-import { styles } from '../styles'
-import { Projects } from '../components/projects/projects'
-import { ContactMe } from '../components/contact/contact'
-import { CustomFabButton } from '../components/fabButton/fabButton'
+import { Box, Container } from "@mui/material";
+import {
+  AboutMe,
+  ContactMe,
+  CustomDivider,
+  CustomFabButton,
+  Introduction,
+  Navbar,
+  Projects,
+  Skills,
+} from "../components";
 
+import { styles } from "../styles";
 
+type Project = {
+  name: string;
+  description: string;
+  language: string;
+  html_url: string;
+  homepage: string;
+};
 
-const Home: NextPage = () => {
+type Grow = {
+  [id: number]: boolean;
+};
 
+type Props = {
+  projects: Project[];
+  showProjects: Grow[];
+  gitProjects: number;
+};
+
+const Home: NextPage<Props> = (props) => {
+  const { projects, showProjects, gitProjects } = props;
 
   return (
-   <>
-   <div>
-   <CustomFabButton />
-   <Box 
-   sx={styles.app}
-    >
-  
-    <Navbar />
-   
+    <>
+      <div>
+        {/* <CustomFabButton /> */}
+        <Box sx={styles.app}>
+          <Navbar />
 
-    <Container maxWidth="md">
-   
-      <Introduction />
-      <Skills />
-      <Divider sx={styles.divider}/>
-      <AboutMe />
-      <Divider sx={styles.divider}/>
-      <Projects />
-      <Divider sx={styles.divider}/>
-      <ContactMe />
-     
-    </Container>
-  
-   
-   </Box>
-   </div>
-  
-   
-    
-   </>
-  )
+          <Container maxWidth="lg">
+            <Introduction />
+          </Container>
+          <CustomDivider />
+          <AboutMe />
+          <Skills />
+          <Projects
+            projects={projects}
+            showProjects={showProjects}
+            gitProjects={gitProjects}
+          />
+        </Box>
+      </div>
+    </>
+  );
+};
+
+export default Home;
+
+export async function getServerSideProps() {
+  const request = await fetch("https://api.github.com/users/thalesmaiaa/repos");
+  const data = await request.json();
+
+  const collapseLength = data.map((project: object, id: number) => {
+    return { [id]: true };
+  });
+  const gitProjects = collapseLength.length;
+
+  ExternalProjects.map((project, id) => {
+    data[ExternalProjects.length + id + 1] = project;
+    collapseLength[ExternalProjects.length + id + 1] = {
+      2: true,
+    };
+  });
+
+  return {
+    props: {
+      projects: data,
+      showProjects: collapseLength,
+      gitProjects: gitProjects,
+    },
+  };
 }
 
-export default Home
+const ExternalProjects = [
+  {
+    name: "Foto Detective",
+    description:
+      "Enhancement of forensic experts work with management of reports and image processment",
+    language: "Next.Js and Material-UI",
+    html_url: "https://fotodetective.com.br/static/forense-logo.svg",
+    homepage: "fotodetective.com.br/login",
+  },
+];
