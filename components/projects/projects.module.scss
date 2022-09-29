@@ -1,0 +1,103 @@
+@import 'theme';
+
+.projectsContainer {
+    text-align: center;
+    height: 50vh;
+
+    .projectsTitle {
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+        font-size: 30px;
+        color: $default-dark;
+        margin: 30px 0;
+    }
+
+    .projectsSubtitle {
+        color: $light-dark;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        text-align: center;
+  
+    }
+
+    .projectsList {
+     width: 80%;
+     margin: 0 auto;
+
+        .projectDiv {
+           
+            margin: 20px 0 ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            .projectCard {
+                width: 350px;
+                height: 250px;
+                background-color: $dark-blue;
+                color: #fff;
+                border-radius: 12px;
+
+                .cardContent {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .projectName {
+                        font-family: 'Lato', sans-serif;
+                        font-weight: bold;
+                        font-size: 20px;
+                        color: #fff;
+                        margin-bottom: 10px; 
+                        position: absolute;
+                       
+                    }
+
+                    .projectHideDesc {
+                        position: absolute;
+                        width: 15%;
+                        
+                        .projectImageDescription {
+                            color: #000;
+                        }
+
+                        .projectDescription {
+                            margin-bottom: 10px;
+                        }
+
+                        .projectDescription, .projectLanguage, .projectImageDescription {
+                            font-family: 'Montserrat', sans-serif;
+                            font-weight: 500;
+                            font-size: 15px;
+                        }
+
+                        .projectImageLanguage {
+                            color: #000;
+                        }
+                    }
+    
+                   
+                }
+               
+
+               
+                
+            }
+
+            .imageCard {
+                background-color: #fff;
+            }
+
+            .projectCard:hover {
+                cursor: pointer;
+            }
+    
+        }
+    }
+
+   
+}
+
