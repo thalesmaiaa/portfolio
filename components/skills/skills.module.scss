@@ -56,3 +56,22 @@
 
     }
 }
+
+@media (width < $md) {
+    .skillsContainer {
+        
+        .skillsTitle {
+            font-size: 20px;
+        }
+
+        .skillsArea {
+            width: 100%;
+
+            .skill {
+                .skillName {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

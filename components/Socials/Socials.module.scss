@@ -6,7 +6,8 @@
     align-items: center;
     flex-direction: column;
     background-color: $dark-blue;
-    height: 15vh;
+    height: 20vh;
+    margin-top: 100px;
 
 
     .socialsText {
@@ -34,4 +35,14 @@
     }
     
 
+}
+
+@media (width < $md) {
+    .socialsContainer {
+        // margin-top: 700px;
+        height: 50%;
+        .socialsText {
+            font-size: 20px;
+        }
+    }
 }

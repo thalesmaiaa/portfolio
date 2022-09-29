@@ -16,6 +16,8 @@
     }
 
     .presentation {
+        width: 60%;
+        margin: 0 auto;
         color: $light-dark;
         font-family: 'Montserrat', sans-serif;
         font-weight: 500;
@@ -52,5 +54,75 @@
 
     }
 
-
 }
+
+
+@media (width < $sm) {
+    .skillsContainer {
+        .name {
+            font-size: 32px;
+        }
+
+        .presentation {
+            font-size: 15px;
+            width: 100%;
+        }
+
+        .imagesArea {
+            margin-top: 50px;
+
+            .images {
+
+                
+                img {
+                    width: 100px;
+                }
+
+               .webImage {
+                    left: 0%;
+                   
+                }
+               .codeImage {
+                right: 0%;
+               }
+            }
+        }
+    }
+    
+}
+
+
+@media (width < $md) {
+    .skillsContainer {
+        .name {
+            font-size: 32px;
+        }
+
+        .presentation {
+            font-size: 15px;
+            width: 100%;
+        }
+
+        .imagesArea {
+            margin-top: 50px;
+
+            .images {
+
+                
+                img {
+                    width: 200px;
+                }
+
+               .webImage {
+                    left: 0%;
+                   
+                }
+               .codeImage {
+                right: 0%;
+               }
+            }
+        }
+    }
+    
+}
+

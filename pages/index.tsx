@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 
-import { Box, Container } from "@mui/material";
+import { Box } from "@mui/material";
 import {
   AboutMe,
   CustomDivider,
@@ -8,10 +8,7 @@ import {
   Navbar,
   Projects,
   Skills,
-  Socials,
 } from "../components";
-
-import { styles } from "../styles";
 
 type Project = {
   name: string;
@@ -37,12 +34,11 @@ const Home: NextPage<Props> = (props) => {
   return (
     <>
       <div>
-        <Box sx={styles.app}>
+        <Box>
           <Navbar />
 
-          <Container maxWidth="lg">
-            <Introduction />
-          </Container>
+          <Introduction />
+
           <CustomDivider />
           <AboutMe />
           <Skills />
@@ -51,8 +47,6 @@ const Home: NextPage<Props> = (props) => {
             showProjects={showProjects}
             gitProjects={gitProjects}
           />
-          <CustomDivider />
-          <Socials />
         </Box>
       </div>
     </>
@@ -71,11 +65,13 @@ export async function getStaticProps() {
   const gitProjects = collapseLength.length;
 
   ExternalProjects.map((project, id) => {
-    data[ExternalProjects.length + id + 1] = project;
-    collapseLength[ExternalProjects.length + id + 1] = {
-      2: true,
+    data[id + 2] = project;
+    collapseLength[id + 2] = {
+      [2 + id]: true,
     };
   });
+
+  console.log(collapseLength);
 
   return {
     props: {

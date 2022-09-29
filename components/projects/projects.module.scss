@@ -38,6 +38,7 @@
                 background-color: $dark-blue;
                 color: #fff;
                 border-radius: 12px;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
                 .cardContent {
                     width: 100%;
@@ -101,3 +102,46 @@
    
 }
 
+@media (width < $md) {
+    .projectsContainer {
+
+        .projectsTitle {
+            font-size: 20px;
+        }
+
+        .projectsSubtitle {
+            font-size: 15px;
+        }
+
+        .projectsList {
+           
+            .projectDiv {
+                
+                
+        
+                .projectCard {
+                    
+
+                    .cardContent {
+                
+                        .projectHideDesc {
+                            position: absolute;
+                            width: 75%;
+                            
+                            
+                        }
+        
+                        
+                    }
+                    
+
+                    
+                    
+                }
+
+                
+        
+            }
+        }
+    }
+}

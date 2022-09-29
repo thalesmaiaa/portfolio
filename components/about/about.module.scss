@@ -32,3 +32,55 @@
         width: 60%;
     }
 }
+
+@media (width > $sm) and (width < $md) {
+    .aboutContainer {
+
+        .aboutText {
+            padding: 3% 5%;
+        }
+        .aboutTitle {
+            font-size: 20px;
+            margin: 10px 0
+        }
+
+        .content {
+
+            font-size: 20px;
+            line-height: 1.7;
+            width: 100%;
+        }
+    }
+}
+
+
+@media (width < $sm) {
+    .aboutContainer {
+
+        .aboutText {
+            padding: 3% 5%;
+        }
+        .aboutTitle {
+            font-size: 20px;
+            margin: 10px 0
+        }
+
+        .content {
+            // display: contents;
+            font-size: 15px;
+            line-height: 1.7;
+            width: 100%;
+        }
+    }
+}
+
+@media (width > $md) and (width < $lg) {
+    .aboutContainer {
+      
+
+        .content {
+            line-height: 1.7;
+            font-size: 20px;
+        }
+    }
+}

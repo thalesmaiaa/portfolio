@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 
 import { classes } from "../../utils";
+import { Socials } from "../Socials/Socials";
 import { Box, Card, CardContent, Grid, Grow, Typography } from "@mui/material";
 
 import styles from "./projects.module.scss";
@@ -60,7 +61,9 @@ export const Projects: React.FC<Props> = (props) => {
           {projects.map((project, id) => (
             <Grid
               item
-              xs={4}
+              xs={12}
+              md={6}
+              lg={projects.length > 2 ? 4 : 6}
               className={styles.projectDiv}
               onClick={() =>
                 router.push(
@@ -127,6 +130,7 @@ export const Projects: React.FC<Props> = (props) => {
           ))}
         </Grid>
       </>
+      <Socials />
     </Box>
   );
 };
