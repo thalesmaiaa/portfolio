@@ -1,0 +1,57 @@
+@import 'theme';
+
+.NotFoundContainer {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+    .NotFoundText {
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+        color: $default-dark;
+        margin-bottom: 20px;
+        font-size: 50px;
+    }
+}
+
+@media (width < $sm) {
+    .NotFoundContainer {
+        width: 100%;
+
+        
+    
+        .NotFoundText {
+           
+            font-size: 20px;
+        }
+    }
+}
+
+@media (width < $md) {
+    .NotFoundContainer {
+        // width: 100%;
+
+        
+    
+        .NotFoundText {
+           
+            font-size: 30px;
+        }
+    }
+}
+
+@media (width < $lg) {
+    .NotFoundContainer {
+
+        
+    
+        .NotFoundText {
+           
+            font-size: 35px;
+        }
+    }
+}

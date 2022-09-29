@@ -1,0 +1,86 @@
+@import 'theme';
+
+.aboutContainer {
+    text-align: center;
+    background-color: $default-blue;
+    height: 45vh;
+
+    .aboutText {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 3%;
+    }
+
+    .aboutTitle {
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+        font-size: 30px;
+        color: #fff;
+        margin: 30px 0;
+    }
+
+    .content {
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        text-align: center;
+        line-height: 2;
+        width: 60%;
+    }
+}
+
+@media (width > $sm) and (width < $md) {
+    .aboutContainer {
+
+        .aboutText {
+            padding: 3% 5%;
+        }
+        .aboutTitle {
+            font-size: 20px;
+            margin: 10px 0
+        }
+
+        .content {
+
+            font-size: 20px;
+            line-height: 1.7;
+            width: 100%;
+        }
+    }
+}
+
+
+@media (width < $sm) {
+    .aboutContainer {
+
+        .aboutText {
+            padding: 3% 5%;
+        }
+        .aboutTitle {
+            font-size: 20px;
+            margin: 10px 0
+        }
+
+        .content {
+            // display: contents;
+            font-size: 15px;
+            line-height: 1.7;
+            width: 100%;
+        }
+    }
+}
+
+@media (width > $md) and (width < $lg) {
+    .aboutContainer {
+      
+
+        .content {
+            line-height: 1.7;
+            font-size: 20px;
+        }
+    }
+}
