@@ -1,0 +1,56 @@
+@import 'theme';
+
+.skillsContainer {
+
+    text-align: center;
+
+  
+
+    .name {
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+        color: $default-dark;
+        margin-bottom: 20px;
+        font-size: 50px;
+        
+    }
+
+    .presentation {
+        color: $light-dark;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 25px;
+        text-align: center;
+        line-height: 2;
+    }
+
+    .imagesArea {
+       
+        margin-top: 200px;
+        text-align: center;
+        .images {
+         .image {
+            position: relative;
+
+         }
+
+         .webImage {
+            left: 10%;
+            z-index: 1001;
+         }
+
+         .codeImage {
+            right: 10%;
+            z-index: 1001;
+         }
+          
+        }
+
+        
+       
+
+
+    }
+
+
+}

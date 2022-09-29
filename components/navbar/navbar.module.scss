@@ -1,0 +1,30 @@
+@import 'theme';
+
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    height: 12vh;
+
+    .linksArea {
+        display: flex;
+        flex-direction: row;
+
+        .links {
+            margin-right: 40px;
+            font-family: 'Lato', sans-serif;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+       
+    }
+
+    .navItem {
+        margin-left: 40px ;
+    }
+
+    
+}
+
