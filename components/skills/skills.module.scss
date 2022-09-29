@@ -1,0 +1,58 @@
+@import 'theme';
+
+.skillsContainer {
+    text-align: center;
+    height: 45vh;
+
+
+    .skillsTitle {
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+        font-size: 30px;
+        color: $default-dark;
+        margin: 30px 0;
+       
+    }
+
+    .skillsArea {
+        padding: 3%;
+        width: 60%;
+        margin: 0 auto;
+
+        .skill {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // width: 10px;
+            margin-bottom: 10px;
+
+
+
+            .skillsIcon {
+                color: $default-blue;
+            }
+
+           
+            .skillName {
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 500;
+
+            }
+
+        }
+
+
+        .skill:hover {
+            cursor: pointer;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+
+    }
+}
