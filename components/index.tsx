@@ -1,5 +1,5 @@
 export { AboutMe } from "./about/about";
-export { CustomFabButton } from "./fabButton/fabButton";
+export { Socials } from "./Socials/Socials";
 export { CustomDivider } from "./Divider/Divider";
 export { Navbar } from "./navbar/navbar";
 export { Skills } from "./skills/skills";

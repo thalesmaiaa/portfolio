@@ -12,14 +12,9 @@ export const Navbar: React.FC = () => {
           <CodeIcon fontSize="large" sx={{ color: "#34B3F1" }} />
         </IconButton>
         <Box className={styles.linksArea}>
-          <Link href="#projects">
+          <Link href="/contact">
             <a>
-              <Typography className={styles.links}>PROJECTS</Typography>
-            </a>
-          </Link>
-          <Link href="#aboutMe">
-            <a>
-              <Typography className={styles.links}>ABOUT ME</Typography>
+              <Typography className={styles.links}>CONTACT ME</Typography>
             </a>
           </Link>
         </Box>

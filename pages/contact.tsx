@@ -4,10 +4,9 @@ import { useRouter } from "next/router";
 
 import { Button, Container, Grid, IconButton, Typography } from "@mui/material";
 import { send } from "@emailjs/browser";
-import { EmailField } from "../components/email/email";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
-import { styles } from "../styles";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { EmailField, PageTitle, SubmitButton } from "../components/email/email";
 
 type Data = {
   [key: string]: string;
@@ -61,15 +60,16 @@ const ContactMe: NextPage = () => {
         <ArrowBackIcon fontSize="large" sx={{ color: "#fff" }} />
       </IconButton>
       <Container maxWidth="md">
-        <Typography variant="h3" sx={styles.contact}>
-          CONTACT ME
-        </Typography>
+        {/* <Typography variant="h3">CONTACT ME</Typography> */}
+        <PageTitle label="CONTACT ME" />
         <form onSubmit={handleSubmit}>
           <Grid container sx={{ mt: 5 }}>
             <EmailField
               label="Name"
               value={data.name}
               onChange={handleChange}
+              style={{ margin: "0 100px 10px 0" }}
+              gridStyle={{ marginRight: "150px" }}
             />
             <EmailField
               label="Email"
@@ -88,14 +88,7 @@ const ContactMe: NextPage = () => {
             />
 
             <Grid item xs={12}>
-              <Button
-                variant="contained"
-                size="large"
-                type="submit"
-                disabled={valid ? false : true}
-              >
-                SEND EMAIL
-              </Button>
+              <SubmitButton label="SEND" valid={valid} />
             </Grid>
           </Grid>
         </form>

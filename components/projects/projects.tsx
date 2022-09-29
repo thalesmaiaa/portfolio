@@ -1,10 +1,10 @@
-import { useCallback, useEffect, useState } from "react";
+import { useState } from "react";
 import { useRouter } from "next/router";
 
+import { classes } from "../../utils";
 import { Box, Card, CardContent, Grid, Grow, Typography } from "@mui/material";
 
 import styles from "./projects.module.scss";
-import { classes } from "../../utils";
 
 type Project = {
   name: string;

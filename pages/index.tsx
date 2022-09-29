@@ -3,13 +3,12 @@ import type { NextPage } from "next";
 import { Box, Container } from "@mui/material";
 import {
   AboutMe,
-  ContactMe,
   CustomDivider,
-  CustomFabButton,
   Introduction,
   Navbar,
   Projects,
   Skills,
+  Socials,
 } from "../components";
 
 import { styles } from "../styles";
@@ -38,7 +37,6 @@ const Home: NextPage<Props> = (props) => {
   return (
     <>
       <div>
-        {/* <CustomFabButton /> */}
         <Box sx={styles.app}>
           <Navbar />
 
@@ -53,6 +51,8 @@ const Home: NextPage<Props> = (props) => {
             showProjects={showProjects}
             gitProjects={gitProjects}
           />
+          <CustomDivider />
+          <Socials />
         </Box>
       </div>
     </>
@@ -61,7 +61,7 @@ const Home: NextPage<Props> = (props) => {
 
 export default Home;
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const request = await fetch("https://api.github.com/users/thalesmaiaa/repos");
   const data = await request.json();
 

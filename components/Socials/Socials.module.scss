@@ -1,0 +1,37 @@
+@import 'theme';
+
+.socialsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: $dark-blue;
+    height: 15vh;
+
+
+    .socialsText {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 25px;
+        color: #fff;
+        margin: 30px 0;
+    }
+
+
+    .buttonsDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        .socialButton {
+            margin-right: 10px;
+        }
+    
+        .socialButton:hover {
+            cursor: pointer;
+        }
+
+    }
+    
+
+}
