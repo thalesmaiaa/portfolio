@@ -71,14 +71,13 @@ export async function getStaticProps() {
     };
   });
 
-  console.log(collapseLength);
-
   return {
     props: {
       projects: data,
       showProjects: collapseLength,
       gitProjects: gitProjects,
     },
+    revalidate: 5,
   };
 }
 

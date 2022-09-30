@@ -33,12 +33,8 @@ const ContactMe: NextPage = () => {
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     send("gmail", "gmail", data, "ozcco-7uFJaYu9Fqa")
-      .then((response) => {
-        console.log(response.status);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+      .then((response) => {})
+      .catch((err) => {});
   }
 
   useEffect(() => {
