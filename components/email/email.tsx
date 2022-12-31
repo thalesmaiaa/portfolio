@@ -1,30 +1,30 @@
-import React, { CSSProperties } from "react";
+import React, { CSSProperties } from 'react'
 
-import { Button, Grid, TextField, Typography } from "@mui/material";
+import { Button, Grid, TextField, Typography } from '@mui/material'
 
-import styles from "./email.module.scss";
+import styles from './email.module.scss'
 
 type Props = {
-  label: string;
-  value: string;
-  onChange: any;
-  xs?: number;
-  error?: any;
-  helperText?: any;
-  multiline?: boolean;
-  rows?: number;
-  style?: CSSProperties;
-  gridStyle?: CSSProperties;
-};
+  label: string
+  value: string
+  onChange: any
+  xs?: number
+  error?: any
+  helperText?: any
+  multiline?: boolean
+  rows?: number
+  style?: CSSProperties
+  gridStyle?: CSSProperties
+}
 
 type TitleProps = {
-  label: string;
-};
+  label: string
+}
 
 type ButtonProps = {
-  label: string;
-  valid: boolean;
-};
+  label: string
+  valid: boolean
+}
 
 export const EmailField: React.FC<Props> = ({
   label,
@@ -36,7 +36,7 @@ export const EmailField: React.FC<Props> = ({
   error = false,
   style,
   gridStyle,
-  helperText = "",
+  helperText = '',
 }: Props) => {
   return (
     <Grid item xs={xs} sx={gridStyle}>
@@ -55,16 +55,16 @@ export const EmailField: React.FC<Props> = ({
         sx={style}
       />
     </Grid>
-  );
-};
+  )
+}
 
 export const PageTitle: React.FC<TitleProps> = ({ label }) => {
   return (
     <Typography variant="h3" className={styles.pageTitle}>
       {label}
     </Typography>
-  );
-};
+  )
+}
 
 export const SubmitButton: React.FC<ButtonProps> = ({ valid, label }) => {
   return (
@@ -72,10 +72,10 @@ export const SubmitButton: React.FC<ButtonProps> = ({ valid, label }) => {
       variant="contained"
       size="large"
       type="submit"
-      disabled={valid ? false : true}
+      disabled={!valid}
       className={styles.submitButton}
     >
       {label}
     </Button>
-  );
-};
+  )
+}

@@ -1,59 +1,57 @@
-import React, { useEffect, useState } from "react";
-import { NextPage } from "next";
-import { useRouter } from "next/router";
+import React, { useEffect, useState } from 'react'
+import { NextPage } from 'next'
+import { useRouter } from 'next/router'
 
-import { Button, Container, Grid, IconButton, Typography } from "@mui/material";
-import { send } from "@emailjs/browser";
+import { Container, Grid, IconButton } from '@mui/material'
+import { send } from '@emailjs/browser'
 
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import { EmailField, PageTitle, SubmitButton } from "../components/email/email";
+import ArrowBackIcon from '@mui/icons-material/ArrowBack'
+import { EmailField, PageTitle, SubmitButton } from '../components/email/email'
 
 type Data = {
-  [key: string]: string;
-  name: string;
-  email: string;
-  text: string;
-};
+  [key: string]: string
+  name: string
+  email: string
+  text: string
+}
 
 const ContactMe: NextPage = () => {
-  const router = useRouter();
+  const router = useRouter()
 
   const [data, setData] = useState<Data>({
-    name: "",
-    email: "",
-    text: "",
-  });
+    name: '',
+    email: '',
+    text: '',
+  })
 
-  const [valid, setIsValid] = useState(true);
+  const [valid, setIsValid] = useState(true)
 
   function isValidEmail(email: string) {
-    return /\S+@\S+\.\S+/.test(email);
+    return /\S+@\S+\.\S+/.test(email)
   }
 
   function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    send("gmail", "gmail", data, "ozcco-7uFJaYu9Fqa")
-      .then((response) => {})
-      .catch((err) => {});
+    e.preventDefault()
+    send('gmail', 'gmail', data, 'ozcco-7uFJaYu9Fqa').then((response) => {})
   }
 
   useEffect(() => {
     if (data.email.length > 0) {
-      const valid = isValidEmail(data.email);
-      setIsValid(valid);
-      return;
+      const valid = isValidEmail(data.email)
+      setIsValid(valid)
+      return
     }
-    setIsValid(true);
-  }, [data.email]);
+    setIsValid(true)
+  }, [data.email])
 
   const handleChange = (e: any) => {
-    setData({ ...data, [e.target.name]: [e.target.value] });
-  };
+    setData({ ...data, [e.target.name]: [e.target.value] })
+  }
 
   return (
     <>
-      <IconButton onClick={() => router.push("/")}>
-        <ArrowBackIcon fontSize="large" sx={{ color: "#fff" }} />
+      <IconButton onClick={() => router.push('/')}>
+        <ArrowBackIcon fontSize="large" sx={{ color: '#fff' }} />
       </IconButton>
       <Container maxWidth="md">
         {/* <Typography variant="h3">CONTACT ME</Typography> */}
@@ -64,15 +62,15 @@ const ContactMe: NextPage = () => {
               label="Name"
               value={data.name}
               onChange={handleChange}
-              style={{ margin: "0 100px 10px 0" }}
-              gridStyle={{ marginRight: "150px" }}
+              style={{ margin: '0 100px 10px 0' }}
+              gridStyle={{ marginRight: '150px' }}
             />
             <EmailField
               label="Email"
               value={data.email}
               onChange={handleChange}
-              error={valid ? false : true}
-              helperText={valid ? "" : "Invalid email"}
+              error={!valid}
+              helperText={valid ? '' : 'Invalid email'}
             />
             <EmailField
               label="Text"
@@ -90,7 +88,7 @@ const ContactMe: NextPage = () => {
         </form>
       </Container>
     </>
-  );
-};
+  )
+}
 
-export default ContactMe;
+export default ContactMe

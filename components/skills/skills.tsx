@@ -1,29 +1,29 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 
-import HtmlIcon from "@mui/icons-material/Html";
-import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
-import JavascriptIcon from "@mui/icons-material/Javascript";
+import HtmlIcon from '@mui/icons-material/Html'
+import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt'
+import JavascriptIcon from '@mui/icons-material/Javascript'
 
-import { DiReact, DiGit, DiSass } from "react-icons/di";
-import { SiNextdotjs, SiTypescript, SiTailwindcss } from "react-icons/si";
-import { Box, Grid, IconButton, Pagination, Typography } from "@mui/material";
+import { DiReact, DiGit, DiSass } from 'react-icons/di'
+import { SiNextdotjs, SiTypescript, SiTailwindcss } from 'react-icons/si'
+import { Box, Grid, IconButton, Pagination, Typography } from '@mui/material'
 
-import styles from "./skills.module.scss";
+import styles from './skills.module.scss'
 
 type Skill = {
-  icon?: React.ReactNode;
-  name?: string;
-};
+  icon?: React.ReactNode
+  name?: string
+}
 
-type Skills = {
-  skills: Skill[];
-  page: number;
-};
+type SkillsProps = {
+  skills: Skill[]
+  page: number
+}
 
 export const Skills: React.FC = () => {
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(1)
 
-  const count = getNumberOfPages(skills);
+  const count = getNumberOfPages(skills)
 
   return (
     <Box className={styles.skillsContainer}>
@@ -41,16 +41,16 @@ export const Skills: React.FC = () => {
         />
       </Box>
     </Box>
-  );
-};
+  )
+}
 
-const Lista: React.FC<Skills> = (props) => {
-  const { skills, page } = props;
+const Lista: React.FC<SkillsProps> = (props) => {
+  const { skills, page } = props
 
-  const start = page === 1 ? 0 : 2 ** page;
-  const end = page * 4;
+  const start = page === 1 ? 0 : 2 ** page
+  const end = page * 4
 
-  const pageSkills = skills.slice(start, end);
+  const pageSkills = skills.slice(start, end)
 
   return (
     <>
@@ -62,44 +62,44 @@ const Lista: React.FC<Skills> = (props) => {
         </Grid>
       ))}
     </>
-  );
-};
+  )
+}
 
 const getNumberOfPages = (array: Skill[]) => {
-  return array.length / 4;
-};
+  return array.length / 4
+}
 
 const skills = [
   {
     icon: <HtmlIcon fontSize="large" className={styles.skillsIcon} />,
-    name: "HMTL",
+    name: 'HMTL',
   },
   {
     icon: <DiSass size="35px" className={styles.skillsIcon} />,
-    name: "SASS",
+    name: 'SASS',
   },
   {
     icon: <SiNextdotjs size="35px" className={styles.skillsIcon} />,
-    name: "Next",
+    name: 'Next',
   },
   {
     icon: <DiReact size="35px" className={styles.skillsIcon} />,
-    name: "React",
+    name: 'React',
   },
   {
     icon: <SiTypescript size="35px" className={styles.skillsIcon} />,
-    name: "TypeScript",
+    name: 'TypeScript',
   },
   {
     icon: <JavascriptIcon fontSize="large" className={styles.skillsIcon} />,
-    name: "JavaScript",
+    name: 'JavaScript',
   },
   {
     icon: <DiGit size="35px" className={styles.skillsIcon} />,
-    name: "Git & Github",
+    name: 'Git & Github',
   },
   {
     icon: <SiTailwindcss size="35px" className={styles.skillsIcon} />,
-    name: "Tailwind",
+    name: 'Tailwind',
   },
-];
+]
