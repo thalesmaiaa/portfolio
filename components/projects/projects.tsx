@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
 import { useRouter } from 'next/router'
+import React, { useState } from 'react'
 
 import { classes } from '../../utils'
 import { ProjectProps } from '../../pages'
@@ -15,27 +15,22 @@ type Props = {
 export const Projects: React.FC<Props> = (props) => {
   const { projects } = props
 
-  const showProjects = projects.map((project: object, id: number) => {
+  const showProjects = projects.map((project: any, id: number) => {
     return true
   })
 
   const [showProject, setShowProject] = useState<any[]>(showProjects)
   const router = useRouter()
 
-  function capitalize(word: string) {
-    const lower = word.toLowerCase()
-    return word.charAt(0).toUpperCase() + lower.slice(1)
-  }
-
-  function handleName(name: string) {
-    const newName = capitalize(name)
-    const capitalizedName = newName.split('-')
-
-    const projectName = capitalizedName.map((name, id) => {
-      return capitalize(name)
+  function handleCardHover(hoverStatus: 'over' | 'leave', id: number) {
+    const updatedProjects = showProject.map((project, index) => {
+      if (index === id) {
+        return hoverStatus !== 'over'
+      }
+      return project
     })
 
-    return projectName
+    setShowProject(updatedProjects)
   }
 
   return (
@@ -57,14 +52,7 @@ export const Projects: React.FC<Props> = (props) => {
                 md={6}
                 lg={projects.length > 2 ? 4 : 6}
                 className={styles.projectDiv}
-                onClick={() => router.push(`/project/${project.name}`)}
-                // onClick={() =>
-                //   router.push(
-                //     project.homepage.includes('github')
-                //       ? project.homepage
-                //       : `https://${project.homepage}`,
-                //   )
-                // }
+                onClick={() => router.push(project.homepage)}
                 key={id}
               >
                 <Card
@@ -73,28 +61,8 @@ export const Projects: React.FC<Props> = (props) => {
                       ? classes(styles.projectCard, styles.imageCard)
                       : styles.projectCard
                   }
-                  onMouseOver={() => {
-                    const updatedProjects = showProject.map(
-                      (project, index) => {
-                        if (index === id) {
-                          return false
-                        }
-                        return project
-                      },
-                    )
-                    setShowProject(updatedProjects)
-                  }}
-                  onMouseLeave={() => {
-                    const updatedProjects = showProject.map(
-                      (project, index) => {
-                        if (index === id) {
-                          return true
-                        }
-                        return project
-                      },
-                    )
-                    setShowProject(updatedProjects)
-                  }}
+                  onMouseOver={() => handleCardHover('over', id)}
+                  onMouseLeave={() => handleCardHover('leave', id)}
                 >
                   <CardContent className={styles.cardContent}>
                     <Grow in={showProject[id]}>
@@ -105,7 +73,7 @@ export const Projects: React.FC<Props> = (props) => {
                           </>
                         ) : (
                           <Typography className={styles.projectName}>
-                            {handleName(project.name)}
+                            {project.name}
                           </Typography>
                         )}
                       </div>

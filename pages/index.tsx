@@ -66,4 +66,14 @@ export const ExternalProjects = [
     homepage: 'fotodetective.com.br/login',
     isExternal: true,
   },
+  {
+    name: 'Sippi',
+    description:
+      'Administration system that interacts external company inovation projects proposals',
+    language: 'ReactJS and Sass',
+    html_url:
+      'https://user-images.githubusercontent.com/84349239/210171233-d49cbb50-4312-42f6-a76d-5ec01ddcbf7e.png',
+    homepage: 'https://sippi.polodeinovacao.ifce.edu.br/login',
+    isExternal: true,
+  },
 ]
