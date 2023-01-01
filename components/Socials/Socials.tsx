@@ -1,28 +1,29 @@
-import { useRouter } from "next/router";
+import { useRouter } from 'next/router'
+import React from 'react'
 
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import { Box, IconButton, Typography } from "@mui/material";
+import GitHubIcon from '@mui/icons-material/GitHub'
+import LinkedInIcon from '@mui/icons-material/LinkedIn'
+import { Box, IconButton, Typography } from '@mui/material'
 
-import styles from "./Socials.module.scss";
+import styles from './Socials.module.scss'
 
 export const Socials: React.FC = () => {
   const buttons = [
     {
-      name: "GitHub",
+      name: 'GitHub',
       icon: <GitHubIcon fontSize="large" />,
-      url: "https://github.com/thalesmaiaa",
-      color: "#171515",
+      url: 'https://github.com/thalesmaiaa',
+      color: '#171515',
     },
     {
-      name: "Linkedin",
+      name: 'Linkedin',
       icon: <LinkedInIcon fontSize="large" />,
-      url: "https://www.linkedin.com/in/thalesmaiaa/",
-      color: "#0A66C2",
+      url: 'https://www.linkedin.com/in/thalesmaiaa/',
+      color: '#0A66C2',
     },
-  ];
+  ]
 
-  const router = useRouter();
+  const router = useRouter()
 
   return (
     <Box className={styles.socialsContainer}>
@@ -37,7 +38,7 @@ export const Socials: React.FC = () => {
             <IconButton
               onClick={() => router.push(button.url)}
               size="large"
-              sx={{ color: "#fff" }}
+              sx={{ color: '#fff' }}
             >
               {button.icon}
             </IconButton>
@@ -45,5 +46,5 @@ export const Socials: React.FC = () => {
         ))}
       </div>
     </Box>
-  );
-};
+  )
+}
