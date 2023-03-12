@@ -62,7 +62,7 @@ export const ExternalProjects = [
     description:
       'Enhancement of forensic experts work with management of reports and image processment',
     language: 'Next.Js and Material-UI',
-    html_url: 'https://fotodetective.com.br/static/forense-logo.svg',
+    html_url: 'https://f8de7e29702db87593299ee1c2b9d90d-staging.fotodetective.com.br/static/forense-logo.svg',
     homepage: 'fotodetective.com.br/login',
     isExternal: true,
   },
