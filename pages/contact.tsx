@@ -57,13 +57,17 @@ const ContactMe: NextPage = () => {
         {/* <Typography variant="h3">CONTACT ME</Typography> */}
         <PageTitle label="CONTACT ME" />
         <form onSubmit={handleSubmit}>
-          <Grid container sx={{ mt: 5 }}>
+          <Grid container sx={{ mt: 5 }} gap={2}>
             <EmailField
               label="Name"
               value={data.name}
               onChange={handleChange}
-              style={{ margin: '0 100px 10px 0' }}
-              gridStyle={{ marginRight: '150px' }}
+              fullWidth
+              gridProps={{
+                item: true,
+                md: 7,
+                xs: 12,
+              }}
             />
             <EmailField
               label="Email"
@@ -71,6 +75,12 @@ const ContactMe: NextPage = () => {
               onChange={handleChange}
               error={!valid}
               helperText={valid ? '' : 'Invalid email'}
+              fullWidth
+              gridProps={{
+                item: true,
+                md: 7,
+                xs: 12,
+              }}
             />
             <EmailField
               label="Text"
@@ -78,7 +88,12 @@ const ContactMe: NextPage = () => {
               onChange={handleChange}
               rows={5}
               multiline={true}
-              xs={12}
+              gridProps={{
+                item: true,
+                xs: 12,
+                md: 7,
+              }}
+              fullWidth
             />
 
             <Grid item xs={12}>

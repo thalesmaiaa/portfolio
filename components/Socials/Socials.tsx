@@ -29,7 +29,9 @@ export const Socials: React.FC = () => {
     <Box className={styles.socialsContainer}>
       <div>
         <Typography className={styles.socialsText} variant="h4">
-          Interested in working together?
+          {`Feel free to reach out, connect, and let's embark on a journey of innovation together.
+
+`}
         </Typography>
       </div>
       <div className={styles.buttonsDiv}>

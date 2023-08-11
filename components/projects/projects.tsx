@@ -15,7 +15,7 @@ type Props = {
 export const Projects: React.FC<Props> = (props) => {
   const { projects } = props
 
-  const showProjects = projects.map((project: any, id: number) => {
+  const showProjects = projects.map(() => {
     return true
   })
 
@@ -52,7 +52,13 @@ export const Projects: React.FC<Props> = (props) => {
                 md={6}
                 lg={projects.length > 2 ? 4 : 6}
                 className={styles.projectDiv}
-                onClick={() => router.push(project.homepage)}
+                onClick={() =>
+                  router.push(
+                    project?.homepage?.length
+                      ? project.homepage
+                      : project.html_url,
+                  )
+                }
                 key={id}
               >
                 <Card

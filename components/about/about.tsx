@@ -10,16 +10,7 @@ export const AboutMe = () => {
           About Me
         </Typography>
         <Typography className={styles.content}>
-          {'My name is Thales and this is a website about me,'}
-          {
-            "  show a few technologies that i've been working recently and list some projects that you might want to see."
-          }
-          {
-            " I'm 19 years old Frontend Developer who  cares profoundly about user  experience and passionate about building excellent softwares that can help lives of others. "
-          }
-          {
-            " When I'm coding, you'll find me playing some games or working out at the gym"
-          }
+          {`Hey there, I'm Thales, a 20-year-old Frontend Developer who thrives on crafting remarkable digital experiences. My journey in the world of technology revolves around my unyielding passion for user-centric design and the creation of software that positively impacts lives. This is the virtual space where I'd like to share some of my recent technological endeavors and showcase a glimpse of the projects that define my creative journey.`}
         </Typography>
       </Box>
     </Box>

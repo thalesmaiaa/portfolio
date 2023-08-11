@@ -24,7 +24,7 @@ export const Introduction: React.FC = () => {
           }
         </Typography>
         <Box className={styles.imagesArea}>
-          <div className={classes(styles.images, styles.desktopImage)}>
+          <div className={styles.images}>
             <img
               src={`https://cdn-icons-png.flaticon.com/${imageWidth}/2920/2920244.png`}
               className={classes(styles.image, styles.webImage)}
